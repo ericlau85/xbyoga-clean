@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/knowledge/layout,_N_T_/knowledge/sanskrit-wisdom/layout,_N_T_/knowledge/sanskrit-wisdom/chants/layout,_N_T_/knowledge/sanskrit-wisdom/chants/page,_N_T_/knowledge/sanskrit-wisdom/chants/"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/knowledge/sanskrit-wisdom/chants/__PAGE__",
+    "/knowledge/sanskrit-wisdom/chants",
+    "/knowledge/sanskrit-wisdom",
+    "/knowledge",
+    "/_index",
+    "/_head"
+  ]
+}

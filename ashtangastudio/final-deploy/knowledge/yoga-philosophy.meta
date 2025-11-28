@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/knowledge/layout,_N_T_/knowledge/yoga-philosophy/layout,_N_T_/knowledge/yoga-philosophy/page,_N_T_/knowledge/yoga-philosophy/"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/knowledge/yoga-philosophy/__PAGE__",
+    "/knowledge/yoga-philosophy",
+    "/knowledge",
+    "/_index",
+    "/_head"
+  ]
+}

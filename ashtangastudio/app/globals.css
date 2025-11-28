@@ -1,0 +1,1611 @@
+/* === 全局基础样式 === */
+:root {
+    --font-futura: 'Futura', 'Helvetica Neue', 'Arial', sans-serif;
+    --primary-color: #2B3327;           /* 深橄榄绿 - 标题和重要文字 */
+    --secondary-color: #5A6652;         /* 中等橄榄绿 - 副标题和描述 */
+    --light-color: #8A9884;             /* 浅橄榄绿 - 辅助文字和边框 */
+    --border-color: #DDE5D9;            /* 极浅橄榄绿 - 边框和分割线 */
+    --accent-color: #3C4A36;            /* 强调色 - 图标、价格、链接 */
+    --accent-light: #6B7A65;            /* 浅强调色 - 悬停状态 */
+    --white: #FFFFFF;
+    --background: #F5F7F3;              /* 主背景 - 非常浅的橄榄绿灰 */
+    --card-bg: #FFFFFF;                 /* 卡片背景 - 纯白对比 */
+    --text-primary: #2B3327;            /* 主要文字颜色 */
+    --text-secondary: #5A6652;          /* 次要文字颜色 */
+    --text-light: #8A9884;              /* 浅色文字 */
+    --coffee-brown: #8B7355;            /* ☕️ 咖啡棕 - 主色 */
+    --walnut-wood: #6F4E37;             /* 🌰 核桃木 - 深棕 */
+    --autumn-leaf: #A86F4C;             /* 🍂 秋叶 - 暖橙棕 */
+    --ripe-olive: #556B2F;              /* 🫒 成熟橄榄 - 主绿 *
+    --avocado-stone: #6B8E23;           /* 🥑 鳄梨核 - 辅助绿 */
+    --antique-gold: #B8860B;            /* 💰 古董金 - 点缀 */
+    --whiskey-amber: #D4A76A;           /* 🥃 威士忌 - 暖调 */
+    --chili-red: #C41E3A;               /* 🌶️ 新增辣椒红 */
+    --hermes-red: #B31B1B;              /* 🎄 爱马仕/圣诞节深红色 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: var(--font-futura);
+    background-color: var(--background);  /* 舒适的浅橄榄绿背景 */
+    color: var(--text-primary);
+    font-size: 0.8rem;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* === 首页专用样式 === */
+.home-page-body {
+    background: #000000 !important;
+    color: #E8EDE5;                  /* 浅灰绿色文字 */
+}
+
+.home-name, .home-section-title, .home-item {
+    color: #E8EDE5;                  /* 浅灰绿色 */
+}
+
+.home-item:hover {
+    color: #8A9884;                  /* 浅橄榄绿悬停 */
+}
+
+.home-container {
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.home-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    height: 100vh;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.home-left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    gap: 8px;
+}
+
+.home-right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    height: 100%;
+}
+
+.home-logo {
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.0;
+}
+
+.ashtanga-text {
+    font-size: 4rem;
+    display: inline-block;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+    transition: all 0.4s ease;
+}
+
+.ashtanga-text:hover {
+    transform: scale(1.08);
+}
+
+.home-name {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.home-location {
+    font-size: 14px;
+    color: #cccccc;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.home-contact-icons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.home-contact-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: transparent;
+    transition: all 0.3s ease;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.home-contact-icon:hover {
+    transform: translateY(-2px);
+}
+
+.home-contact-icon:hover .fa-envelope {
+    color: #1a73e8 !important;  /* 邮箱蓝色 */
+}
+
+.home-contact-icon:hover .fa-weixin {
+    color: #07C160 !important;  /* 微信绿色 */
+}
+
+.home-contact-icon:hover .fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+/* Logo 悬停效果 */
+.ashtanga-text:hover {
+    transform: scale(1.08);
+    filter:
+        drop-shadow(0 0 15px rgba(255, 215, 0, 0.4))
+        drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4))
+        drop-shadow(-1px -1px 2px rgba(255, 255, 255, 0.2));
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.home-member-section {
+    margin-top: 8px;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-auth-btn.icon-only {
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.home-auth-btn.icon-only:hover {
+    color: #1a73e8;
+    transform: translateY(-2px);
+}
+
+.home-section {
+    margin-bottom: 15px;
+}
+
+.home-section-title {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 8px;
+    line-height: 1.0;
+}
+
+.home-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-start;
+}
+
+.home-item {
+    display: block;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px 10px 0;
+    transition: all 0.3s ease;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    letter-spacing: 1.2px;
+}
+
+.home-item:hover {
+    color: #cccccc;
+    padding-left: 15px;
+    letter-spacing: 3px;
+}
+
+.home-item:hover::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    opacity: 1;
+}
+
+.home-item::before {
+    content: "→";
+    position: absolute;
+    left: -10px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.lang-btn-single {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.lang-btn-single:hover {
+    /* 移除背景色，只保留变换效果 */
+    transform: translateY(-2px);
+}
+
+.lang-btn-single:hover i {
+    transform: scale(1.1);
+}
+
+/* 微信二维码弹窗样式 */
+.qr-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.qr-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 300px;
+  width: 90%;
+}
+
+.qr-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.qr-image {
+  width: 200px;
+  height: 200px;
+  margin: 15px 0;
+  border-radius: 8px;
+}
+
+.qr-username {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 导航栏样式 */
+.main-navigation {
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-logo:hover {
+  color: var(--accent-color);
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-item > span {
+  color: var(--text-primary);
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover > span {
+  color: var(--accent-color);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  min-width: 200px;
+  z-index: 1000;
+  padding: 8px 0;
+  animation: dropdownFadeIn 0.2s ease;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.dropdown-item:hover {
+  background: var(--background);
+  color: var(--accent-color);
+}
+
+.dropdown-item i {
+  width: 16px;
+  text-align: center;
+  color: var(--accent-color);
+}
+
+.nav-language-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-language-btn:hover {
+  background: var(--background);
+}
+
+/* === Ashtanga 课程页面专用样式 === */
+.page-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    background: var(--background);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* 页面区块基础样式 */
+.hero-section,
+.features-section,
+.practice-section,
+.pricing-section,
+.profile-section {
+    margin-bottom: 60px;
+}
+
+/* 标题样式 */
+.hero-title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.hero-subtitle {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.hero-description {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section-title {
+    color: var(--hermes-red) !important;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* 网格布局 */
+.features-grid,
+.practice-grid,
+.pricing-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.practice-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.pricing-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/* 卡片样式 */
+.feature-card,
+.practice-card,
+.pricing-category {
+    padding: 1.5rem;
+    background: var(--card-bg);  /* 白色卡片背景 */
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(43, 51, 39, 0.06);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.feature-card {
+    text-align: center;
+}
+
+.practice-card {
+    text-align: left;
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 0.8rem;
+}
+
+.practice-subtitle {
+    color: var(--accent-color);
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.practice-features {
+    list-style: none;
+    padding: 0;
+}
+
+.practice-features li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.75rem;
+    color: var(--secondary-color);
+}
+
+/* 下拉菜单样式 */
+.nav-item.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  z-index: 1000;
+  padding: 8px 0;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.dropdown-item:hover {
+  background: var(--background);
+  color: var(--accent-color);
+}
+
+.dropdown-item i {
+  width: 16px;
+  text-align: center;
+  color: var(--accent-color);
+}
+
+/* 课程安排样式 */
+.schedule-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.schedule-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(43, 51, 39, 0.06);
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.schedule-icon {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  margin-top: 0.2rem;
+}
+
+.schedule-content h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: var(--primary-color);
+}
+
+.schedule-time {
+  font-size: 0.8rem;
+  color: var(--accent-color);
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.schedule-description {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.rest-days {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* 价格样式 */
+.pricing-subtitle {
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.category-subtitle {
+    color: var(--light-color);
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.price-info {
+    flex: 1;
+}
+
+.price-title {
+    font-weight: 400;
+    font-size: 0.8rem;
+    display: block;
+}
+
+.price-description {
+    color: var(--light-color);
+    font-size: 0.7rem;
+    display: block;
+}
+
+/* Ashtanga 课程价格 */
+.pricing-category .price-item .price-amount {
+    font-size: 0.85rem !important;
+    font-weight: 500;
+    color: var(--accent-color);
+}
+
+/* 梵语课程价格 */
+.sanskrit-page .price-card .price-amount,
+.page-container .price-card .price-amount {
+    font-size: 24px !important;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+/* 教师介绍 */
+.profile-section {
+    text-align: center;
+}
+
+.profile-card {
+    max-width: 500px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 2px solid var(--accent-color);
+}
+
+.profile-info h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.subtitle {
+    color: var(--accent-color);
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.intro-text {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: var(--secondary-color);
+}
+
+/* 月相日历新样式 */
+.moon-table {
+  display: grid;
+  gap: 0;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--card-bg);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.moon-header {
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr;
+  padding: 1.5rem 1rem;
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  color: white;
+  text-align: center;
+  font-weight: 500;
+}
+
+.month-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.phase-header {
+  padding: 0 1rem;
+  border-left: 1px solid rgba(255,255,255,0.2);
+  font-size: 0.9rem;
+}
+
+.moon-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr;
+  padding: 1.2rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.moon-row:hover {
+  background: var(--background);
+}
+
+.moon-row:last-child {
+  border-bottom: none;
+}
+
+.month-name {
+  font-weight: 600;
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.phase-times {
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.time-pair {
+  text-align: center;
+  min-width: 180px;
+}
+
+.main-time {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 4px;
+}
+
+.utc-reference {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  font-family: 'SF Mono', 'Courier New', monospace;
+}
+
+.next-day-marker {
+  color: var(--hermes-red);
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-left: 2px;
+}
+
+.year-title {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.year-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+.legend {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1rem;
+  background: var(--background);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* 添加到现有的CSS中 */
+.multiple-fullmoons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.multiple-fullmoons .time-pair {
+  min-width: 160px;
+}
+
+/* 确保5月行有足够高度 */
+.moon-row:has(.multiple-fullmoons) {
+  min-height: 120px;
+  align-items: flex-start;
+  padding: 1.5rem 1rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .moon-table {
+    border-radius: 8px;
+  }
+  
+  .moon-header {
+    grid-template-columns: 80px 1fr 1fr;
+    padding: 1rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .moon-row {
+    grid-template-columns: 80px 1fr 1fr;
+    padding: 1rem 0.5rem;
+  }
+  
+  .phase-header {
+    font-size: 0.8rem;
+    padding: 0 0.5rem;
+  }
+  
+  .time-pair {
+    min-width: 140px;
+  }
+  
+  .main-time {
+    font-size: 0.9rem;
+  }
+  
+  .utc-reference {
+    font-size: 0.7rem;
+  }
+  
+  .month-name {
+    font-size: 0.85rem;
+  }
+}
+
+/* 梵语课程专用样式 */
+.info-section {
+  padding: 60px 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info-card {
+  padding: 30px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+}
+
+.info-card h3 {
+  font-size: 21px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-card li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 15px;
+  color: var(--secondary-color);
+}
+
+.info-card li:last-child {
+  border-bottom: none;
+}
+
+.syllabus-section {
+  padding: 40px 0;
+}
+
+.syllabus-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+}
+
+.syllabus-steps {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.syllabus-step {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.syllabus-step:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.step-content h3 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: var(--primary-color);
+}
+
+.step-content p {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--secondary-color);
+}
+
+.price-card {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.price-card h3 {
+  font-size: 19px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.price-main {
+  margin-bottom: 16px;
+}
+
+.price-amount {
+  font-size: 24px !important;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.price-period {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-left: 4px;
+}
+
+.price-details {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+/* 知识库样式 */
+.categories-section {
+  padding: 60px 0;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.category-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: inherit;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent-light);
+}
+
+.category-icon {
+  font-size: 32px;
+  color: var(--accent-color);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.category-content {
+  flex: 1;
+}
+
+.category-content h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+}
+
+.category-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.article-count {
+  font-size: 0.8rem;
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.category-arrow {
+  color: var(--light-color);
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-arrow {
+  transform: translateX(4px);
+  color: var(--accent-color);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .category-card {
+    padding: 24px;
+  }
+  
+  .category-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
+
+/* 文章页面样式 */
+.articles-section {
+  padding: 60px 0;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.article-card {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent-light);
+}
+
+.article-icon {
+  font-size: 24px;
+  color: var(--accent-color);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.article-content h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+}
+
+.article-content p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* 标签页样式 */
+.tabs-section {
+  padding: 40px 0 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tab {
+  padding: 12px 24px;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.tab:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.tab.active {
+  background: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+/* 内容卡片 */
+.content-section {
+  padding: 40px 0;
+}
+
+.content-card {
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-card h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* 体式列表样式 */
+.asana-list {
+  display: grid;
+  gap: 12px;
+}
+
+.asana-item {
+  display: flex;
+  gap: 20px;
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color);
+  align-items: center;
+}
+
+.sanskrit {
+  font-family: monospace;
+  font-weight: 500;
+  min-width: 200px;
+  color: var(--primary-color);
+}
+
+.chinese {
+  font-family: monospace;
+  color: var(--text-secondary);
+  min-width: 150px;
+}
+
+.meaning {
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+/* 释义列表样式 */
+.meanings-list {
+  display: grid;
+  gap: 20px;
+}
+
+.meaning-item {
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--background);
+}
+
+.sanskrit-line {
+  margin-bottom: 8px;
+}
+
+.sanskrit-line strong {
+  color: var(--primary-color);
+  font-family: monospace;
+}
+
+.translation {
+  font-weight: 500;
+  color: var(--accent-color);
+  margin-bottom: 4px;
+}
+
+.breakdown {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-family: monospace;
+}
+
+/* 体式卡片布局 */
+.asanas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.asana-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background: var(--card-bg);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.asana-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.asana-card:hover {
+  border-color: var(--accent-light);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.asana-card:hover::before {
+  opacity: 1;
+}
+
+/* 横向布局 */
+.asana-content-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.full-name-section {
+  flex: 1;
+  text-align: left;
+}
+
+.etymology-section {
+  flex: 1;
+  text-align: left;
+}
+
+/* 字体大小和颜色 */
+.sanskrit-full {
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+  color: var(--hermes-red); /* 使用您的深红色 */
+}
+
+.trans-full {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.translation-full {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  line-height: 1.3;
+}
+
+/* 词根分解部分 */
+.sanskrit-parts {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.trans-parts {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.meaning-parts {
+  font-size: 0.65rem;
+  color: var(--text-light);
+  line-height: 1.3;
+}
+
+/* 动态效果 */
+.asana-card {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 延迟动画 */
+.asana-card:nth-child(1) { animation-delay: 0.1s; }
+.asana-card:nth-child(2) { animation-delay: 0.2s; }
+.asana-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .asana-content-horizontal {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .full-name-section,
+  .etymology-section {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .asana-card {
+    padding: 1.2rem;
+  }
+  
+  .asanas-container {
+    gap: 1.2rem;
+  }
+}
+
+/* === 响应式设计 - 合并所有媒体查询 === */
+@media (max-width: 768px) {
+    /* 首页响应式 */
+    .home-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px;
+    }
+    
+    .page-container {
+        padding: 40px 15px;
+    }
+    
+    .features-grid,
+    .practice-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .feature-card,
+    .practice-card,
+    .pricing-category {
+        padding: 1rem;
+    }
+    
+    /* 月相表响应式 */
+    .moon-table {
+        border-radius: 8px;
+    }
+    
+    .moon-header {
+        grid-template-columns: 120px 1fr 1fr;
+        padding: 1rem 0.5rem;
+    }
+    
+    .moon-row {
+        grid-template-columns: 120px 1fr 1fr;
+        padding: 1rem 0.5rem;
+    }
+    
+    .time-pair {
+        min-width: auto;
+        gap: 0.5rem;
+        padding: 0.6rem;
+        flex-direction: column;
+    }
+    
+    .timezone-subheader {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+    
+    .time-arrow {
+        transform: rotate(90deg);
+    }
+    
+    .arrow {
+        transform: rotate(90deg);
+    }
+    
+    /* 价格响应式调整 */
+    .price-amount {
+        font-size: 0.8rem; /* Ashtanga 课程移动端价格 */
+    }
+    
+    .price-card .price-amount {
+        font-size: 21px; /* 梵语课程移动端价格 */
+    }
+    
+    /* 梵语课程响应式 */
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .syllabus-step {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .price-card {
+        padding: 30px 20px;
+    }
+}
+

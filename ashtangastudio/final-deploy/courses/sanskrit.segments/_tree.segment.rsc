@@ -1,0 +1,3 @@
+:HL["/_next/static/chunks/1d6e7aa26f7ed56c.css","style"]
+:HL["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css","style"]
+0:{"buildId":"Ff4EVQflh5ECHKVhR6wvF","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"courses","paramType":null,"paramKey":"courses","hasRuntimePrefetch":false,"slots":{"children":{"name":"sanskrit","paramType":null,"paramKey":"sanskrit","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

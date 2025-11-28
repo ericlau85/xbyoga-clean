@@ -1,0 +1,17 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/knowledge/layout,_N_T_/knowledge/yoga-foundation/layout,_N_T_/knowledge/yoga-foundation/practice/layout,_N_T_/knowledge/yoga-foundation/practice/page,_N_T_/knowledge/yoga-foundation/practice/"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/knowledge/yoga-foundation/practice/__PAGE__",
+    "/knowledge/yoga-foundation/practice",
+    "/knowledge/yoga-foundation",
+    "/knowledge",
+    "/_index",
+    "/_head"
+  ]
+}
